@@ -1,13 +1,11 @@
 import React from 'react';
+import './Search.css';
 
 const Search = () => {
-    const searchStyle = {
-        fontSize: '20px',
-        color: 'blue',
-    }
-
     return (
-        <input style={searchStyle} placeholder="поиск"/>
+        <input type="text"
+                className="form-control search-input"
+                placeholder="поиск"/>
     );
 };
 
