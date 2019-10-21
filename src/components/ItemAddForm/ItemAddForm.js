@@ -17,6 +17,7 @@ class ItemAddForm extends React.Component {
     onSubmit = (event) => {
         event.preventDefault();
         this.props.onCreate(this.state.label);
+        this.setState ( {label: '' });
     }
 
     render() {
@@ -27,8 +28,9 @@ class ItemAddForm extends React.Component {
                 <input type="text"
                        className="form-control"
                        onChange={this.onLabelChange}
-                       placeholder="Что Вы хотите сделать?" 
-                />
+                       placeholder="Что Вы хотите сделать?"
+                       value={this.state.label}
+                 />
                 <button className="btn btn-outline-secondary btn-size"> 
                     Добавить задачу
                 </button>
