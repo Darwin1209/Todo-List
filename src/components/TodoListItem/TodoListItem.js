@@ -3,22 +3,6 @@ import './TodoListItem.css'
 
 class TodoListItem extends React.Component {
     
-    onLabelClick = () => {
-        this.setState (({done}) => {
-            return {
-                done: !done
-            };
-        });
-    };
-
-    onMarkImportant = () => {
-        this.setState (({important}) => {
-            return {
-                important: !important
-            };
-        });
-    };
-
     render() {
 
         const { 
@@ -44,7 +28,7 @@ class TodoListItem extends React.Component {
                 <span 
                     className="todo-list-item-label"
                     onClick = { onToggleDone }>
-                    {label}
+                    { label }
                 </span>
     
                 <button type="button"
